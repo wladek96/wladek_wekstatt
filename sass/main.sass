@@ -1,0 +1,159 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+@keyframes slideInFromLeft
+  from
+    transform: translate(50%)
+    opacity: 0
+  to
+    transform: translate(0)
+    opacity: 1
+
+@keyframes shadowIn
+  from
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  to
+    box-shadow: 0 50px 250px rgba(0, 0, 0, 0.65)
+
+.grid
+  display: grid
+
+.main-header
+  height: 12.5vh
+  position: relative
+  align-content: center
+  justify-content: center
+
+#lottie
+    background-color: #fff
+    width: 325px
+    height: 80px
+    display: block
+    overflow: hidden
+    transform: translate3d(0,0,0)
+    text-align: center
+    opacity: 1
+    z-index: -1
+
+.center
+  align-content: center
+  justify-content: center
+
+.main-body
+  width: 1170px
+  height: 720px
+  grid-template-columns: repeat(13, 1fr)
+  box-shadow: 0 50px 250px rgba(0, 0, 0, 0.65)
+  align-content: center
+  justify-content: center
+  animation: 1s ease-out 3500ms shadowIn
+
+.photo
+  height: inherit
+  grid-column: 1 / 9
+
+.photo1
+  height: inherit
+  width: 720px
+  position: absolute
+  background-image: url(../img/1.png)
+  background-position: center
+  background-size: cover
+  transform: translate3d(0,0,0)
+  animation: 3s ease-out 500ms slideInFromLeft
+  &::before
+    content: ''
+    height: inherit
+    width: 720px
+    position: absolute
+    background-image: url(../img/2.png)
+    background-position: center
+    background-size: cover
+    transform: translate3d(0,0,0)
+    animation: 3s ease-out 500ms slideInFromLeft
+  &::after
+    content: ''
+    height: inherit
+    width: 720px
+    position: absolute
+    background-image: url(../img/3.png)
+    background-position: center
+    background-size: cover
+    transform: translate3d(0,0,0)
+    animation: 2s ease-out 1500ms slideInFromLeft
+
+// .photo2
+//   height: inherit
+//   width: 720px
+//   position: absolute
+//   background-image: url(../img/2.png)
+//   background-position: center
+//   background-size: cover
+//   transform: translate3d(0,0,0)
+//   animation: 2500ms ease-out 1s slideInFromLeft
+//   &::before
+//     content: ''
+//     height: inherit
+//     width: 720px
+//     position: absolute
+//     background-image: url(../img/1.png)
+//     background-position: center
+//     background-size: cover
+//     transform: translate3d(0,0,0)
+//     animation: 3s ease-out 500ms slideInFromLeft
+//   &::after
+//     content: ''
+//     height: inherit
+//     width: 720px
+//     position: absolute
+//     background-image: url(../img/3.png)
+//     background-position: center
+//     background-size: cover
+//     transform: translate3d(0,0,0)
+//     animation: 2s ease-out 1500ms slideInFromLeft
+//
+// .photo3
+//   height: inherit
+//   width: 720px
+//   position: absolute
+//   background-image: url(../img/3.png)
+//   background-position: center
+//   background-size: cover
+//   transform: translate3d(0,0,0)
+//   animation: 2s ease-out 1500ms slideInFromLeft
+//   &::before
+//     content: ''
+//     height: inherit
+//     width: 720px
+//     position: absolute
+//     background-image: url(../img/1.png)
+//     background-position: center
+//     background-size: cover
+//     transform: translate3d(0,0,0)
+//     animation: 3s ease-out 500ms slideInFromLeft
+//   &::after
+//     content: ''
+//     height: inherit
+//     width: 720px
+//     position: absolute
+//     background-image: url(../img/2.png)
+//     background-position: center
+//     background-size: cover
+//     transform: translate3d(0,0,0)
+//     animation: 2s ease-out 1500ms slideInFromLeft
+
+.about
+  height: 450px
+  align-content: center
+  justify-content: center
+  grid-column: 9 / 14
+  background-color: #fff
+  z-index: 1
+
+.scnd-name
+  font-family: open-sans-bold, sans-serif
+  font-size: 121px
+
+@import "media" // Всегда в конце
