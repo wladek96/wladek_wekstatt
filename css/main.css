@@ -432,6 +432,26 @@ body {
 .text-center {
   text-align: center; }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important; }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #aaa;
+  font-size: 48px;
+  display: none; }
+
+.js-loading .loading {
+  display: block; }
+
 .grid {
   display: grid; }
 
