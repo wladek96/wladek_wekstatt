@@ -1,0 +1,61 @@
+@keyframes slideInFromRight
+  from
+    transform: translate(50%)
+    opacity: 0
+  to
+    transform: translate(0)
+    opacity: 1
+
+@keyframes slideInFromLeft
+  from
+    transform: translate(-100%)
+    opacity: 0
+  to
+    transform: translate(0)
+    opacity: 1
+
+@keyframes shadowIn
+  from
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  to
+    box-shadow: 0 50px 250px rgba(0, 0, 0, 0.65)
+
+@keyframes bounce
+  0%, 20%, 50%, 80%, 100%
+    transform: translateY(0)
+
+  40%
+    transform: translateY(-10px)
+
+  60%
+    transform: translateY(-5px)
+
+@keyframes btnRev
+  from
+    height: 0
+    opacity: 0
+  to
+    height: 90px
+    opacity: 1
+
+.main-body
+  animation: 2s ease-out 3500ms forwards shadowIn
+
+.photo1
+  animation: 3s ease-out 1s both slideInFromRight
+  &::before
+    animation: 3s ease-out 1s both slideInFromRight
+  &::after
+    animation: 3s ease-out both 1s slideInFromLeft
+
+.name
+  animation: 1.5s ease-in-out 2500ms both slideInFromLeft
+
+.shrt-info
+  animation: 1.5s ease-in-out 2500ms both slideInFromLeft
+
+.st1
+  animation: 2s infinite bounce
+
+.btn-download
+  animation: 1.5s ease-in-out 4s both btnRev
