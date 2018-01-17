@@ -445,14 +445,12 @@ body {
   justify-content: center; }
 
 #lottie {
-  background-color: #fff;
   width: 325px;
   height: 80px;
   display: block;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  text-align: center;
   opacity: 1;
   z-index: -1; }
 
@@ -518,7 +516,7 @@ body {
 
 .scnd-name {
   font-family: open-sans-bold, sans-serif;
-  font-size: 121px; }
+  font-size: 102px; }
 
 .frst-name {
   font-family: open-sans-regular, sans-serif;

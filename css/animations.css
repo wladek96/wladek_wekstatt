@@ -78,18 +78,22 @@
 
 @-webkit-keyframes btnRev {
   from {
-    height: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
     opacity: 0; }
   to {
-    height: 90px;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
     opacity: 1; } }
 
 @keyframes btnRev {
   from {
-    height: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
     opacity: 0; }
   to {
-    height: 90px;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
     opacity: 1; } }
 
 .main-body {
@@ -115,9 +119,9 @@
   animation: 1.5s ease-in-out 2500ms both slideInFromLeft; }
 
 .st1 {
-  -webkit-animation: 2s infinite bounce;
-  animation: 2s infinite bounce; }
+  -webkit-animation: 2s infinite 5s bounce;
+  animation: 2s infinite 5s bounce; }
 
 .btn-download {
-  -webkit-animation: 1.5s ease-in-out 4s both btnRev;
-  animation: 1.5s ease-in-out 4s both btnRev; }
+  -webkit-animation: 1s ease-in-out 4s both btnRev;
+  animation: 1s ease-in-out 4s both btnRev; }
