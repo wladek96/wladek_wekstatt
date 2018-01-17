@@ -96,6 +96,30 @@
     transform: scaleY(1);
     opacity: 1; } }
 
+@-webkit-keyframes loader {
+  from {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes loader {
+  from {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+#lottie {
+  -webkit-animation: 1s ease-out 0ms forwards loader;
+  animation: 1s ease-out 0ms forwards loader; }
+
 .main-body {
   -webkit-animation: 2s ease-out 3500ms forwards shadowIn;
   animation: 2s ease-out 3500ms forwards shadowIn; }
@@ -111,17 +135,17 @@
     animation: 3s ease-out both 1s slideInFromLeft; }
 
 .name {
-  -webkit-animation: 1.5s ease-in-out 2500ms both slideInFromLeft;
-  animation: 1.5s ease-in-out 2500ms both slideInFromLeft; }
+  -webkit-animation: 1s ease-out 4s both slideInFromLeft;
+  animation: 1s ease-out 4s both slideInFromLeft; }
 
 .shrt-info {
-  -webkit-animation: 1.5s ease-in-out 2500ms both slideInFromLeft;
-  animation: 1.5s ease-in-out 2500ms both slideInFromLeft; }
+  -webkit-animation: 1.5s ease-out 4s both slideInFromLeft;
+  animation: 1.5s ease-out 4s both slideInFromLeft; }
 
 .st1 {
   -webkit-animation: 2s infinite 5s bounce;
   animation: 2s infinite 5s bounce; }
 
 .btn-download {
-  -webkit-animation: 1s ease-in-out 4s both btnRev;
-  animation: 1s ease-in-out 4s both btnRev; }
+  -webkit-animation: .2s ease-in-out 5.5s both btnRev;
+  animation: .2s ease-in-out 5.5s both btnRev; }

@@ -38,6 +38,17 @@
     transform: scaleY(1)
     opacity: 1
 
+@keyframes loader
+    from
+      transform: translateY(50%)
+      opacity: 0
+    to
+      transform: translateY(0)
+      opacity: 1
+
+#lottie
+    animation: 1s ease-out 0ms forwards loader
+
 .main-body
   animation: 2s ease-out 3500ms forwards shadowIn
 
@@ -49,13 +60,13 @@
     animation: 3s ease-out both 1s slideInFromLeft
 
 .name
-  animation: 1.5s ease-in-out 2500ms both slideInFromLeft
+  animation: 1s ease-out 4s both slideInFromLeft
 
 .shrt-info
-  animation: 1.5s ease-in-out 2500ms both slideInFromLeft
+  animation: 1.5s ease-out 4s both slideInFromLeft
 
 .st1
   animation: 2s infinite 5s bounce
 
 .btn-download
-  animation: 1s ease-in-out 4s both btnRev
+  animation: .2s ease-in-out 5.5s both btnRev
