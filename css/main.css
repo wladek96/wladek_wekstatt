@@ -469,6 +469,7 @@ body {
   justify-content: center; }
 
 #lottie {
+  width: 400px;
   display: block;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -490,8 +491,12 @@ body {
 .mnu-btn {
   grid-column: 1;
   grid-row: 1;
-  z-index: 1;
-  width: 100%; }
+  z-index: 10;
+  width: 45px;
+  position: relative;
+  top: 5%;
+  left: 4%;
+  fill: white; }
 
 .photo1 {
   height: inherit;
@@ -604,6 +609,23 @@ body {
 
 a {
   text-decoration: none; }
+
+.footer {
+  width: 480px;
+  margin: auto;
+  grid-template-columns: repeat(10, 1fr);
+  position: relative;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 15%; }
+
+.socicons {
+  color: gray; }
+  .socicons:hover {
+    color: red; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

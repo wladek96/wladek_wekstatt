@@ -27,7 +27,7 @@
 
 body
   overflow-x: hidden
-  
+
 .main-header
   height: 15%
   width: 100vw
@@ -36,6 +36,7 @@ body
   justify-content: center
 
 #lottie
+    width: 400px
     display: block
     overflow: hidden
     transform: translate3d(0,0,0)
@@ -57,8 +58,12 @@ body
 .mnu-btn
   grid-column: 1
   grid-row: 1
-  z-index: 1
-  width: 100%
+  z-index: 10
+  width: 45px
+  position: relative
+  top: 5%
+  left: 4%
+  fill: white
 
 .photo1
   height: inherit
@@ -85,66 +90,6 @@ body
     background-position: 15% 0%
     position: absolute
 
-// .photo2
-//   height: inherit
-//   width: 720px
-//   position: absolute
-//   background-image: url(../img/2.png)
-//   background-position: center
-//   background-size: cover
-//   transform: translate3d(0,0,0)
-//   animation: 2500ms ease-out 1s slideInFromRight
-//   &::before
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/1.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 3s ease-out 500ms slideInFromRight
-//   &::after
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/3.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 2s ease-out 1500ms slideInFromRight
-//
-// .photo3
-//   height: inherit
-//   width: 720px
-//   position: absolute
-//   background-image: url(../img/3.png)
-//   background-position: center
-//   background-size: cover
-//   transform: translate3d(0,0,0)
-//   animation: 2s ease-out 1500ms slideInFromRight
-//   &::before
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/1.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 3s ease-out 500ms slideInFromRight
-//   &::after
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/2.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 2s ease-out 1500ms slideInFromRight
-
 .about
   height: 450px
   align-content: center
@@ -169,7 +114,6 @@ body
   padding: 0 3%
   font-size: 14px
   line-height: 170%
-  // animation: 2s ease-out 1500ms slideInFromLeft
 
 .btn-download
   height: 90px
@@ -218,4 +162,19 @@ body
 
 a
   text-decoration: none
+
+.footer
+  width: 480px
+  margin: auto
+  grid-template-columns: repeat(10, 1fr)
+  position: relative
+  align-content: center
+  justify-content: center
+  height: 15%
+
+.socicons
+  color: gray
+  &:hover
+    color: red
+
 @import "media" // Всегда в конце
