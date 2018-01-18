@@ -492,11 +492,10 @@ body {
   grid-column: 1;
   grid-row: 1;
   z-index: 10;
-  width: 45px;
   position: relative;
-  top: 5%;
-  left: 4%;
-  fill: white; }
+  fill: white;
+  cursor: pointer;
+  padding: 30px 30px; }
 
 .photo1 {
   height: inherit;
@@ -505,7 +504,8 @@ body {
   background-image: url(../img/1.png);
   background-size: cover;
   background-position: 15% 0%;
-  overflow: hidden; }
+  overflow: hidden;
+  grid-template-columns: repeat(8, 1fr); }
   .photo1::before {
     content: '';
     height: inherit;
@@ -626,6 +626,47 @@ a {
   color: gray; }
   .socicons:hover {
     color: red; }
+
+.off-canvas {
+  grid-column: 6 / 9;
+  position: absolute;
+  width: 270px;
+  height: inherit;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  -o-transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease; }
+  .off-canvas > ul {
+    list-style-type: none; }
+
+.off-canvas.open {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0); }
+
+.mnu-li {
+  color: white;
+  font-family: open-sans-bold;
+  font-size: 25px;
+  line-height: 3.1;
+  -webkit-transition: font-size .2s;
+  -o-transition: font-size .2s;
+  transition: font-size .2s; }
+  .mnu-li:hover {
+    font-size: 35px; }
+
+.a-act {
+  color: red; }
+
+.inactive {
+  pointer-events: none;
+  cursor: default; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

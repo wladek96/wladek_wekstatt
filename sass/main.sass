@@ -59,11 +59,13 @@ body
   grid-column: 1
   grid-row: 1
   z-index: 10
-  width: 45px
+  // width: 25px
   position: relative
-  top: 5%
-  left: 4%
+  // top: 5%
+  // left: 3%
   fill: white
+  cursor: pointer
+  padding: 30px 30px
 
 .photo1
   height: inherit
@@ -73,6 +75,7 @@ body
   background-size: cover
   background-position: 15% 0%
   overflow: hidden
+  grid-template-columns: repeat(8, 1fr)
   &::before
     content: ''
     height: inherit
@@ -176,5 +179,36 @@ a
   color: gray
   &:hover
     color: red
+
+.off-canvas
+  grid-column: 6 / 9
+  position: absolute
+  width: 270px
+  height: inherit
+  z-index: 5
+  background-color: rgba(0,0,0,0.9)
+  transform: translateX(100%)
+  transition: transform 0.6s ease
+  >ul
+    list-style-type: none
+
+.off-canvas.open
+  transform: translateX(0)
+
+.mnu-li
+  color: white
+  font-family: open-sans-bold
+  font-size: 25px
+  line-height: 3.1
+  transition: font-size .2s
+  &:hover
+    font-size: 35px
+
+.a-act
+  color: red
+
+.inactive
+  pointer-events: none
+  cursor: default
 
 @import "media" // Всегда в конце

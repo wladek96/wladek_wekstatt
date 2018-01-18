@@ -26,25 +26,31 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">
+	<script src="js/barba/barba.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		Barba.Pjax.start();
+	</script>
 	<audio autoplay loop>
   <source src="audio/Boy Tedson — A night in Cologne (Edit).ogg" type="audio/ogg">
   <source src="audio/Boy Tedson — A night in Cologne (Edit).mp3" type="audio/mpeg">
+
 Your browser does not support the audio element.
 </audio>
 </head>
 
 <body>
 	<script type="text/javascript">
-  document.body.classList.add('js-loading');
+		document.body.classList.add('js-loading');
 
-window.addEventListener("load", showPage);
+		window.addEventListener("load", showPage);
 
-function showPage() {
-document.body.classList.remove('js-loading');
-}
-  </script>
+		function showPage() {
+			document.body.classList.remove('js-loading');
+		}
+	</script>
 	<div class="loading">Waiting for "load" event...</div>
 	<header class="main-header grid">
 
@@ -54,16 +60,29 @@ document.body.classList.remove('js-loading');
 
 		<script src="img/Logo/index.js" charset="utf-8"></script>
 	</header>
-	<section class="center grid">
-		<section class="main-body grid">
-			<div class="photo">
-				<div class="photo1"></div>
+	<div id="barba-wrapper">
+		<div class="barba-container">
+			<section class="center grid">
+				<section class="main-body grid">
+					<div class="photo">
+						<div class="photo1 grid">
+							<nav class="off-canvas">
+								<ul>
+									<li><a href="index.html" class="mnu-li a-act">HOME</a></li>
+									<li><a href="#" class="mnu-li">WW</a></li>
+									<li><a href="#" class="mnu-li">ME</a></li>
+									<li><a href="#" class="mnu-li">SKILLS</a></li>
+									<li><a href="#" class="mnu-li">PORTFOLIO</a></li>
+									<li><a href="#" class="mnu-li">CONTACTS</a></li>
+								</ul>
+							</nav>
+						</div>
 
-				<!-- <div class="photo2"></div> -->
-				<!-- <div class="photo3"></div> -->
-			</div>
-			<div class="mnu-btn grid">
-			<svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 33" >
+						<!-- <div class="photo2"></div> -->
+						<!-- <div class="photo3"></div> -->
+					</div>
+					<div class="mnu-btn mnu-toggle grid">
+						<svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 33">
 				<style>
 					.st2{fill:#fff}
 					.st3{fill:#fff}
@@ -73,18 +92,18 @@ document.body.classList.remove('js-loading');
 				<path class="st3" d="M0 15h50v3H0z" id="MDL"/>
 				<path class="st4" d="M0 30h50v3H0z" id="TP"/>
 			</svg>
-			</div>
-			<div class="about grid">
-				<div class="name">
-					<span class="scnd-name">Liakh</span><br>
-					<span class="frst-name">  Vladyslav Vitaliiovych</span>
-				</div>
-				<div class="shrt-info">
-					<span>UI / UX Design, Graphic Design,<br>Motion Graphics, Voice acting,<br> Web developement, CGI,
+					</div>
+					<div class="about grid">
+						<div class="name">
+							<span class="scnd-name">Liakh</span><br>
+							<span class="frst-name">  Vladyslav Vitaliiovych</span>
+						</div>
+						<div class="shrt-info">
+							<span>UI / UX Design, Graphic Design,<br>Motion Graphics, Voice acting,<br> Web developement, CGI,
 </span>
-				</div>
-			</div>
-			<a href="/img/1.png" class="btn-download grid" download>
+						</div>
+					</div>
+					<a href="/img/1.png" class="btn-download grid" download>
 				<span class="dwnl grid">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 60">
 				  <g id="l1">
@@ -97,31 +116,32 @@ document.body.classList.remove('js-loading');
 			 <p class="dw-pr">Printable <br> Resume</p>
 		 <p class="dw">Download</p></div>
 			</a>
-			<div class="btn-next">
+					<div class="btn-next">
 
-			</div>
-			<div class="btn-text">
+					</div>
+					<div class="btn-text">
 
-			</div>
+					</div>
 
-		</section>
-	</section>
-
-<div class="footer grid">
-				 <a href="mailto:wlodzislaw.lw@gmail.com" class="socicon-mail socicons"></a>
-				 <a href="https://www.facebook.com/profile.php?id=100004982208307" class="socicon-facebook socicons"></a>
-				 <a href="https://www.instagram.com/lyakh.vladislav/" class="socicon-instagram socicons"></a>
-				 <a href="https://www.behance.net/wlodzislaw3516" class="socicon-behance socicons"></a>
-				 <a href="https://youtube.com" class="socicon-youtube socicons inactive"></a>
-				 <a href="https://github.com/wladek96" class="socicon-github socicons"></a>
-				 <a href="https://www.linkedin.com/in/wladekwerkstatt/" class="socicons socicon-linkedin"></a>
-				 <a href="skype:live:wlodzislaw.lw" class="socicons socicon-skype"></a>
-				 <a href="tg://resolve?domain=wladekwerkstatt" class="socicons socicon-telegram"></a>
-				 <a href="tg://resolve?domain=wladekwerkstatt" class="socicons socicon-medium inactive"></a>
-</div>
+				</section>
+			</section>
+		</div>
+	</div>
+	<div class="footer grid">
+		<a href="mailto:wlodzislaw.lw@gmail.com" class="socicon-mail socicons"></a>
+		<a href="https://www.facebook.com/profile.php?id=100004982208307" class="socicon-facebook socicons"></a>
+		<a href="https://www.instagram.com/lyakh.vladislav/" class="socicon-instagram socicons"></a>
+		<a href="https://www.behance.net/wlodzislaw3516" class="socicon-behance socicons"></a>
+		<a href="https://youtube.com" class="socicon-youtube socicons"></a>
+		<a href="https://github.com/wladek96" class="socicon-github socicons"></a>
+		<a href="https://www.linkedin.com/in/wladekwerkstatt/" class="socicons socicon-linkedin"></a>
+		<a href="skype:live:wlodzislaw.lw" class="socicons socicon-skype"></a>
+		<a href="tg://resolve?domain=wladekwerkstatt" class="socicons socicon-telegram"></a>
+		<a href="tg://resolve?domain=wladekwerkstatt" class="socicons socicon-medium"></a>
+	</div>
 
 </body>
 <link rel="stylesheet" href="/css/animations.css">
-
+<script src="js/mnu.js" charset="utf-8"></script>
 
 </html>
