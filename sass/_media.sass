@@ -4,7 +4,57 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+  .main-body
+    width: 720px
+    height: 1170px
+    grid-template-columns: repeat(3, 1fr)
+
+  .photo
+    height: 720px
+    width: inherit
+    grid-column: 1 / 4
+    grid-row: 1
+
+  .about
+    height: 450px
+    align-content: center
+    justify-content: center
+    grid-column: 2 / 4
+    grid-row: 2
+
+  .btn-download
+    width: 270px
+    grid-column: 1 / 2
+    grid-row: 2
+    background-color: red
+    box-shadow: 0 15px 125px red
+    z-index: 5
+    grid-template-columns: repeat(2, 1fr)
+
+  .photo1
+    height: 720px
+    width: inherit
+    position: absolute
+    background-image: url(../img/1.png)
+    background-size: cover
+    background-position: 15% 0%
+    overflow: hidden
+    &::before
+      content: ''
+      height: inherit
+      width: 720px
+      position: absolute
+      background-image: url(../img/2.png)
+      background-size: cover
+      background-position: 15% 0%
+    &::after
+      content: ''
+      height: inherit
+      width: 720px
+      background-image: url(../img/3.png)
+      background-size: cover
+      background-position: 15% 0%
+      position: absolute
 
 
 /* Medium Devices, Desktops */
@@ -14,17 +64,250 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  .main-body
+    width: 480px
+    height: 780px
+    grid-template-columns: repeat(3, 1fr)
 
+  .photo
+    height: 480px
+    width: inherit
+    grid-column: 1 / 4
+    grid-row: 1
 
+  .about
+    height: 300px
+    align-content: center
+    justify-content: center
+    grid-column: 2 / 4
+    grid-row: 2
+    // background-color: #fff
+    z-index: -5
+    line-height: 30px
+    overflow: hidden
+
+  .btn-download
+    width: 180px
+    grid-column: 1 / 2
+    grid-row: 2
+    background-color: red
+    box-shadow: 0 15px 125px red
+    z-index: 5
+    grid-template-columns: repeat(2, 1fr)
+
+  .photo1
+    height: 480px
+    width: inherit
+    position: absolute
+    background-image: url(../img/1.png)
+    background-size: cover
+    background-position: 15% 0%
+    overflow: hidden
+    &::before
+      content: ''
+      height: inherit
+      width: 480px
+      position: absolute
+      background-image: url(../img/2.png)
+      background-size: cover
+      background-position: 15% 0%
+    &::after
+      content: ''
+      height: inherit
+      width: 480px
+      background-image: url(../img/3.png)
+      background-size: cover
+      background-position: 15% 0%
+      position: absolute
+
+  .dwnl
+    height: inherit
+    grid-column: 1
+    align-content: center
+    justify-content: center
+    width: 40px
+
+  .scnd-name
+    font-size: 72px
+
+  .frst-name
+    font-size: 18px
+
+  .shrt-info
+    font-size: 12px
+
+  .dw-pr
+    margin-top: 15px
+    font-size: 12px
+    line-height: 135%
+
+  .dw
+    font-size: 12px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+  .main-body
+    width: 360px
+    height: 585px
+    grid-template-columns: repeat(3, 1fr)
+
+  .photo
+    height: 360px
+    width: inherit
+    grid-column: 1 / 4
+    grid-row: 1
+
+  .about
+    height: 225px
+    align-content: center
+    justify-content: center
+    grid-column: 2 / 4
+    grid-row: 2
+    // background-color: #fff
+    z-index: -5
+    line-height: 30px
+    overflow: hidden
+
+  .btn-download
+    width: 135px
+    grid-column: 1 / 2
+    grid-row: 2
+    background-color: red
+    box-shadow: 0 15px 125px red
+    z-index: 5
+    grid-template-columns: repeat(2, 1fr)
+
+  .photo1
+    height: 360px
+    width: inherit
+    position: absolute
+    background-image: url(../img/1.png)
+    background-size: cover
+    background-position: 15% 0%
+    overflow: hidden
+    &::before
+      content: ''
+      height: inherit
+      width: 360px
+      position: absolute
+      background-image: url(../img/2.png)
+      background-size: cover
+      background-position: 15% 0%
+    &::after
+      content: ''
+      height: inherit
+      width: 360px
+      background-image: url(../img/3.png)
+      background-size: cover
+      background-position: 15% 0%
+      position: absolute
+
+  .dwnl
+    height: inherit
+    grid-column: 1
+    align-content: center
+    justify-content: center
+    width: 40px
+
+  .scnd-name
+    font-size: 60px
+
+  .frst-name
+    font-size: 14px
+
+  .shrt-info
+    font-size: 10px
+
+  .dw-pr
+    margin-top: 20px
+    font-size: 10px
+    line-height: 135%
+
+  .dw
+    font-size: 10px
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
+  .main-body
+    width: 320px
+    height: 520px
+    grid-template-columns: repeat(3, 1fr)
+
+  .photo
+    height: 320px
+    width: inherit
+    grid-column: 1 / 4
+    grid-row: 1
+
+  .about
+    height: 200px
+    align-content: center
+    justify-content: center
+    grid-column: 2 / 4
+    grid-row: 2
+    // background-color: #fff
+    z-index: -5
+    line-height: 30px
+    overflow: hidden
+
+  .btn-download
+    width: 120px
+    grid-column: 1 / 2
+    grid-row: 2
+    background-color: red
+    box-shadow: 0 15px 125px red
+    z-index: 5
+    grid-template-columns: repeat(2, 1fr)
+
+  .photo1
+    height: 320px
+    width: inherit
+    position: absolute
+    background-image: url(../img/1.png)
+    background-size: cover
+    background-position: 15% 0%
+    overflow: hidden
+    &::before
+      content: ''
+      height: inherit
+      width: 320px
+      position: absolute
+      background-image: url(../img/2.png)
+      background-size: cover
+      background-position: 15% 0%
+    &::after
+      content: ''
+      height: inherit
+      width: 320px
+      background-image: url(../img/3.png)
+      background-size: cover
+      background-position: 15% 0%
+      position: absolute
+
+  .dwnl
+    height: inherit
+    grid-column: 1
+    align-content: center
+    justify-content: center
+    width: 40px
+
+  .scnd-name
+    font-size: 60px
+
+  .frst-name
+    font-size: 14px
+
+  .shrt-info
+    font-size: 10px
+
+  .dw-pr
+    margin-top: 20px
+    font-size: 10px
+    line-height: 135%
+
+  .dw
+    font-size: 10px
+
 
 
 /*==========  Mobile First  ==========*/
@@ -52,4 +335,3 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
-

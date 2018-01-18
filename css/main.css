@@ -455,8 +455,12 @@ body {
 .grid {
   display: grid; }
 
+body {
+  overflow-x: hidden; }
+
 .main-header {
-  height: 12.5vh;
+  height: 15%;
+  width: 100vw;
   position: relative;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -465,8 +469,6 @@ body {
   justify-content: center; }
 
 #lottie {
-  width: 325px;
-  height: 80px;
   display: block;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -474,27 +476,22 @@ body {
   opacity: 1;
   z-index: -1; }
 
-.center {
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
 .main-body {
   width: 1170px;
   height: 720px;
   grid-template-columns: repeat(13, 1fr);
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  margin: auto; }
 
 .photo {
   height: inherit;
   grid-column: 1 / 9;
   grid-row: 1 / 3; }
+
+.mnu-btn {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  width: 100%; }
 
 .photo1 {
   height: inherit;
@@ -611,7 +608,57 @@ a {
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .main-body {
+    width: 720px;
+    height: 1170px;
+    grid-template-columns: repeat(3, 1fr); }
+  .photo {
+    height: 720px;
+    width: inherit;
+    grid-column: 1 / 4;
+    grid-row: 1; }
+  .about {
+    height: 450px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-column: 2 / 4;
+    grid-row: 2; }
+  .btn-download {
+    width: 270px;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: red;
+    -webkit-box-shadow: 0 15px 125px red;
+    box-shadow: 0 15px 125px red;
+    z-index: 5;
+    grid-template-columns: repeat(2, 1fr); }
+  .photo1 {
+    height: 720px;
+    width: inherit;
+    position: absolute;
+    background-image: url(../img/1.png);
+    background-size: cover;
+    background-position: 15% 0%;
+    overflow: hidden; }
+    .photo1::before {
+      content: '';
+      height: inherit;
+      width: 720px;
+      position: absolute;
+      background-image: url(../img/2.png);
+      background-size: cover;
+      background-position: 15% 0%; }
+    .photo1::after {
+      content: '';
+      height: inherit;
+      width: 720px;
+      background-image: url(../img/3.png);
+      background-size: cover;
+      background-position: 15% 0%;
+      position: absolute; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -619,15 +666,237 @@ a {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/ }
+  .main-body {
+    width: 480px;
+    height: 780px;
+    grid-template-columns: repeat(3, 1fr); }
+  .photo {
+    height: 480px;
+    width: inherit;
+    grid-column: 1 / 4;
+    grid-row: 1; }
+  .about {
+    height: 300px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    z-index: -5;
+    line-height: 30px;
+    overflow: hidden; }
+  .btn-download {
+    width: 180px;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: red;
+    -webkit-box-shadow: 0 15px 125px red;
+    box-shadow: 0 15px 125px red;
+    z-index: 5;
+    grid-template-columns: repeat(2, 1fr); }
+  .photo1 {
+    height: 480px;
+    width: inherit;
+    position: absolute;
+    background-image: url(../img/1.png);
+    background-size: cover;
+    background-position: 15% 0%;
+    overflow: hidden; }
+    .photo1::before {
+      content: '';
+      height: inherit;
+      width: 480px;
+      position: absolute;
+      background-image: url(../img/2.png);
+      background-size: cover;
+      background-position: 15% 0%; }
+    .photo1::after {
+      content: '';
+      height: inherit;
+      width: 480px;
+      background-image: url(../img/3.png);
+      background-size: cover;
+      background-position: 15% 0%;
+      position: absolute; }
+  .dwnl {
+    height: inherit;
+    grid-column: 1;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px; }
+  .scnd-name {
+    font-size: 72px; }
+  .frst-name {
+    font-size: 18px; }
+  .shrt-info {
+    font-size: 12px; }
+  .dw-pr {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 135%; }
+  .dw {
+    font-size: 12px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/ }
+  .main-body {
+    width: 360px;
+    height: 585px;
+    grid-template-columns: repeat(3, 1fr); }
+  .photo {
+    height: 360px;
+    width: inherit;
+    grid-column: 1 / 4;
+    grid-row: 1; }
+  .about {
+    height: 225px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    z-index: -5;
+    line-height: 30px;
+    overflow: hidden; }
+  .btn-download {
+    width: 135px;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: red;
+    -webkit-box-shadow: 0 15px 125px red;
+    box-shadow: 0 15px 125px red;
+    z-index: 5;
+    grid-template-columns: repeat(2, 1fr); }
+  .photo1 {
+    height: 360px;
+    width: inherit;
+    position: absolute;
+    background-image: url(../img/1.png);
+    background-size: cover;
+    background-position: 15% 0%;
+    overflow: hidden; }
+    .photo1::before {
+      content: '';
+      height: inherit;
+      width: 360px;
+      position: absolute;
+      background-image: url(../img/2.png);
+      background-size: cover;
+      background-position: 15% 0%; }
+    .photo1::after {
+      content: '';
+      height: inherit;
+      width: 360px;
+      background-image: url(../img/3.png);
+      background-size: cover;
+      background-position: 15% 0%;
+      position: absolute; }
+  .dwnl {
+    height: inherit;
+    grid-column: 1;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px; }
+  .scnd-name {
+    font-size: 60px; }
+  .frst-name {
+    font-size: 14px; }
+  .shrt-info {
+    font-size: 10px; }
+  .dw-pr {
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 135%; }
+  .dw {
+    font-size: 10px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/ }
+  .main-body {
+    width: 320px;
+    height: 520px;
+    grid-template-columns: repeat(3, 1fr); }
+  .photo {
+    height: 320px;
+    width: inherit;
+    grid-column: 1 / 4;
+    grid-row: 1; }
+  .about {
+    height: 200px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-column: 2 / 4;
+    grid-row: 2;
+    z-index: -5;
+    line-height: 30px;
+    overflow: hidden; }
+  .btn-download {
+    width: 120px;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: red;
+    -webkit-box-shadow: 0 15px 125px red;
+    box-shadow: 0 15px 125px red;
+    z-index: 5;
+    grid-template-columns: repeat(2, 1fr); }
+  .photo1 {
+    height: 320px;
+    width: inherit;
+    position: absolute;
+    background-image: url(../img/1.png);
+    background-size: cover;
+    background-position: 15% 0%;
+    overflow: hidden; }
+    .photo1::before {
+      content: '';
+      height: inherit;
+      width: 320px;
+      position: absolute;
+      background-image: url(../img/2.png);
+      background-size: cover;
+      background-position: 15% 0%; }
+    .photo1::after {
+      content: '';
+      height: inherit;
+      width: 320px;
+      background-image: url(../img/3.png);
+      background-size: cover;
+      background-position: 15% 0%;
+      position: absolute; }
+  .dwnl {
+    height: inherit;
+    grid-column: 1;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px; }
+  .scnd-name {
+    font-size: 60px; }
+  .frst-name {
+    font-size: 14px; }
+  .shrt-info {
+    font-size: 10px; }
+  .dw-pr {
+    margin-top: 20px;
+    font-size: 10px;
+    line-height: 135%; }
+  .dw {
+    font-size: 10px; } }
 
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */
