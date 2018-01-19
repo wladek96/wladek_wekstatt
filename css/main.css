@@ -456,7 +456,7 @@ body {
   display: grid; }
 
 body {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .main-header {
   height: 15%;
@@ -469,7 +469,7 @@ body {
   justify-content: center; }
 
 #lottie {
-  width: 400px;
+  width: 210px;
   display: block;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -667,6 +667,9 @@ a {
 .inactive {
   pointer-events: none;
   cursor: default; }
+
+nav::before {
+  content: 'Navigation: '; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
