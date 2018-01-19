@@ -3,157 +3,212 @@
 @import "base"
 @import "vars"
 
-@keyframes slideInFromLeft
-  from
-    transform: translate(50%)
-    opacity: 0
-  to
-    transform: translate(0)
-    opacity: 1
 
-@keyframes shadowIn
-  from
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0)
-  to
-    box-shadow: 0 50px 250px rgba(0, 0, 0, 0.65)
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after
+  animation-play-state: paused !important
+
+.loading
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  color: #aaa
+  font-size: 48px
+  display: none
+
+
+.js-loading .loading
+  display: block
 
 .grid
   display: grid
 
+body
+  overflow-x: hidden
+
 .main-header
-  height: 12.5vh
+  height: 15%
+  width: 100vw
   position: relative
   align-content: center
   justify-content: center
 
 #lottie
-    background-color: #fff
-    width: 325px
-    height: 80px
+    width: 400px
     display: block
     overflow: hidden
     transform: translate3d(0,0,0)
-    text-align: center
     opacity: 1
     z-index: -1
-
-.center
-  align-content: center
-  justify-content: center
 
 .main-body
   width: 1170px
   height: 720px
   grid-template-columns: repeat(13, 1fr)
-  box-shadow: 0 50px 250px rgba(0, 0, 0, 0.65)
-  align-content: center
-  justify-content: center
-  animation: 1s ease-out 3500ms shadowIn
+  margin: auto
+
 
 .photo
   height: inherit
   grid-column: 1 / 9
+  grid-row: 1 / 3
+
+.mnu-btn
+  grid-column: 1
+  grid-row: 1
+  z-index: 10
+  // width: 25px
+  position: relative
+  // top: 5%
+  // left: 3%
+  fill: white
+  cursor: pointer
+  padding: 30px 30px
 
 .photo1
   height: inherit
   width: 720px
   position: absolute
   background-image: url(../img/1.png)
-  background-position: center
   background-size: cover
-  transform: translate3d(0,0,0)
-  animation: 3s ease-out 500ms slideInFromLeft
+  background-position: 15% 0%
+  overflow: hidden
+  grid-template-columns: repeat(8, 1fr)
   &::before
     content: ''
     height: inherit
     width: 720px
     position: absolute
     background-image: url(../img/2.png)
-    background-position: center
     background-size: cover
-    transform: translate3d(0,0,0)
-    animation: 3s ease-out 500ms slideInFromLeft
+    background-position: 15% 0%
   &::after
     content: ''
     height: inherit
     width: 720px
-    position: absolute
     background-image: url(../img/3.png)
-    background-position: center
     background-size: cover
-    transform: translate3d(0,0,0)
-    animation: 2s ease-out 1500ms slideInFromLeft
-
-// .photo2
-//   height: inherit
-//   width: 720px
-//   position: absolute
-//   background-image: url(../img/2.png)
-//   background-position: center
-//   background-size: cover
-//   transform: translate3d(0,0,0)
-//   animation: 2500ms ease-out 1s slideInFromLeft
-//   &::before
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/1.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 3s ease-out 500ms slideInFromLeft
-//   &::after
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/3.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 2s ease-out 1500ms slideInFromLeft
-//
-// .photo3
-//   height: inherit
-//   width: 720px
-//   position: absolute
-//   background-image: url(../img/3.png)
-//   background-position: center
-//   background-size: cover
-//   transform: translate3d(0,0,0)
-//   animation: 2s ease-out 1500ms slideInFromLeft
-//   &::before
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/1.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 3s ease-out 500ms slideInFromLeft
-//   &::after
-//     content: ''
-//     height: inherit
-//     width: 720px
-//     position: absolute
-//     background-image: url(../img/2.png)
-//     background-position: center
-//     background-size: cover
-//     transform: translate3d(0,0,0)
-//     animation: 2s ease-out 1500ms slideInFromLeft
+    background-position: 15% 0%
+    position: absolute
 
 .about
   height: 450px
   align-content: center
   justify-content: center
   grid-column: 9 / 14
-  background-color: #fff
-  z-index: 1
+  grid-row: 1
+  // background-color: #fff
+  z-index: -5
+  line-height: 30px
+  overflow: hidden
 
 .scnd-name
   font-family: open-sans-bold, sans-serif
-  font-size: 121px
+  font-size: 102px
+
+.frst-name
+  font-family: open-sans-regular, sans-serif
+  font-size: 24px
+
+.shrt-info
+  margin-top: 20%
+  padding: 0 3%
+  font-size: 14px
+  line-height: 170%
+
+.btn-download
+  height: 90px
+  grid-column: 9 / 11
+  grid-row: 2
+  background-color: red
+  box-shadow: 0 15px 125px red
+  z-index: 5
+  grid-template-columns: repeat(2, 1fr)
+  transition: box-shadow 0.7s, background-color 0.5s
+  &:hover
+    box-shadow: 0 -15px 200px red
+    background-color: #fff
+  &:active
+    background-color: indianred
+
+.btn-text
+  height: 270px
+
+.dwnl
+  height: inherit
+  grid-column: 1
+  align-content: center
+  justify-content: center
+  width: 45px
+
+.dw-txt
+  grid-column: 2
+  align-content: center
+  justify-content: center
+  width: 45px
+  height: inherit
+
+.dw-pr
+  margin-top: 11px
+  font-size: 14px
+  font-family: open-sans-bold, sans-serif
+  line-height: 135%
+  color: black
+
+.dw
+  font-size: 14px
+  font-family: open-sans-italic, sans-serif
+  line-height: 100%
+  color: black
+
+a
+  text-decoration: none
+
+.footer
+  width: 480px
+  margin: auto
+  grid-template-columns: repeat(10, 1fr)
+  position: relative
+  align-content: center
+  justify-content: center
+  height: 15%
+
+.socicons
+  color: gray
+  &:hover
+    color: red
+
+.off-canvas
+  grid-column: 6 / 9
+  position: absolute
+  width: 270px
+  height: inherit
+  z-index: 5
+  background-color: rgba(0,0,0,0.9)
+  transform: translateX(100%)
+  transition: transform 0.6s ease
+  >ul
+    list-style-type: none
+
+.off-canvas.open
+  transform: translateX(0)
+
+.mnu-li
+  color: white
+  font-family: open-sans-bold
+  font-size: 25px
+  line-height: 3.1
+  transition: font-size .2s
+  &:hover
+    font-size: 35px
+
+.a-act
+  color: red
+
+.inactive
+  pointer-events: none
+  cursor: default
 
 @import "media" // Всегда в конце
