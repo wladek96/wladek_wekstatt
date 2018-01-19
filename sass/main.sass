@@ -197,7 +197,7 @@ a
 
 .mnu-li
   color: white
-  font-family: open-sans-bold
+  font-family: open-sans-bold, sans-serif
   font-size: 25px
   line-height: 3.1
   transition: font-size .2s
@@ -211,7 +211,14 @@ a
   pointer-events: none
   cursor: default
 
-nav::before
-  content: 'Navigation: '
+.copyright
+  grid-column: 1 / 11
+  grid-row: 2
+  text-align: center
+  font-family: open-sans-regular, sans-serif
+  font-size: 9px
+  color: gray
+  line-height: 5
+  margin-bottom: 0
 
 @import "media" // Всегда в конце
