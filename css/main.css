@@ -488,14 +488,21 @@ body {
   grid-column: 1 / 9;
   grid-row: 1 / 3; }
 
+.menu-cont {
+  position: absolute;
+  width: 100%;
+  height: 720px;
+  margin: auto;
+  grid-template-columns: auto 1170px auto; }
+
 .mnu-btn {
-  grid-column: 1;
-  grid-row: 1;
   z-index: 10;
-  position: relative;
-  fill: white;
   cursor: pointer;
-  padding: 30px 30px; }
+  width: 100px;
+  padding: 30px 30px;
+  position: absolute;
+  margin: auto;
+  grid-column: 2; }
 
 .photo1 {
   height: inherit;
@@ -632,7 +639,7 @@ a {
   position: absolute;
   width: 270px;
   height: inherit;
-  z-index: 5;
+  z-index: 11;
   background-color: rgba(0, 0, 0, 0.9);
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);

@@ -41,9 +41,7 @@ Your browser does not support the audio element.
 <body>
   <script type="text/javascript">
     document.body.classList.add('js-loading');
-
     window.addEventListener("load", showPage);
-
     function showPage() {
       document.body.classList.remove('js-loading');
     }
@@ -57,6 +55,20 @@ Your browser does not support the audio element.
 
     <script src="img/Logo/WW_logo_svg.js" charset="utf-8"></script>
   </header>
+  <div class="menu-cont grid">
+  <div class="mnu-btn mnu-toggle">
+    <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 33">
+<style>
+  .st2{fill:#fff}
+  .st3{fill:#fff}
+  .st4{fill:#fff}
+</style>
+<path class="st2" d="M0 0h50v3H0z" id="MDL_1_"/>
+<path class="st3" d="M0 15h50v3H0z" id="MDL"/>
+<path class="st4" d="M0 30h50v3H0z" id="TP"/>
+</svg>
+  </div>
+  </div>
   <section class="center grid">
     <div id="barba-wrapper">
       <!-- <div class="barba-container"> -->
@@ -78,22 +90,10 @@ Your browser does not support the audio element.
             <!-- <div class="photo2"></div> -->
             <!-- <div class="photo3"></div> -->
           </div>
-          <div class="mnu-btn mnu-toggle grid">
-            <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 33">
-				<style>
-					.st2{fill:#fff}
-					.st3{fill:#fff}
-					.st4{fill:#fff}
-				</style>
-				<path class="st2" d="M0 0h50v3H0z" id="MDL_1_"/>
-				<path class="st3" d="M0 15h50v3H0z" id="MDL"/>
-				<path class="st4" d="M0 30h50v3H0z" id="TP"/>
-			</svg>
-          </div>
           <div class="about grid">
             <div class="name">
               <span class="scnd-name">Liakh</span><br>
-              <span class="frst-name">  Vladyslav Vitaliiovych</span>
+              <span class="frst-name">  Vladyslav Vitaliiovych</span>
             </div>
             <div class="shrt-info">
               <span>UI / UX Design, Graphic Design,<br>Motion Graphics, Voice acting,<br> Web developement, CGI,
@@ -141,17 +141,10 @@ Your browser does not support the audio element.
 
 </body>
 <link rel="stylesheet" href="/css/animations.css">
-<script type="text/javascript">
-  Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-    $('.mnu-toggle').on('click', function() {
-      $('.off-canvas').toggleClass('open');
-    });
-  });
-</script>
 <script src="js/mnu.js" charset="utf-8"></script>
-
-
 <script type="text/javascript">
-	Barba.Pjax.start();
+  Barba.Pjax.start();
 </script>
+
+
 </html>
