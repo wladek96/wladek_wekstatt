@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<script lang="en">
 
 <head>
 
@@ -141,17 +141,20 @@ Your browser does not support the audio element.
 
 </body>
 <link rel="stylesheet" href="/css/animations.css">
+
+<script src="js/mnu.js" charset="utf-8" ></script>
+
+
 <script type="text/javascript">
-  Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
-    $('.mnu-toggle').on('click', function() {
-      $('.off-canvas').toggleClass('open');
+  $(document).ready(function() {
+    Barba.Pjax.start();
+
+    Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+      $('.mnu-toggle').on('click', function() {
+        $('.off-canvas').toggleClass('open');
+      });
     });
-  });
+  })
 </script>
-<script src="js/mnu.js" charset="utf-8"></script>
 
-
-<script type="text/javascript">
-	Barba.Pjax.start();
-</script>
 </html>
