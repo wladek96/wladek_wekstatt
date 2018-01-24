@@ -1,3 +1,15 @@
+@-webkit-keyframes opacityIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes opacityIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 @-webkit-keyframes slideInFromRight {
   from {
     -webkit-transform: translate(50%);
@@ -32,6 +44,46 @@
   from {
     -webkit-transform: translate(-100%);
     transform: translate(-100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@-webkit-keyframes slideInFromTop {
+  from {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@keyframes slideInFromTop {
+  from {
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@-webkit-keyframes slideInFromBottom {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@keyframes slideInFromBottom {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
     opacity: 0; }
   to {
     -webkit-transform: translate(0);
@@ -120,7 +172,7 @@
   -webkit-animation: 1s ease-out 0ms forwards loader;
   animation: 1s ease-out 0ms forwards loader; }
 
-.main-body {
+.center {
   -webkit-animation: 2s ease-out 3500ms forwards shadowIn;
   animation: 2s ease-out 3500ms forwards shadowIn; }
 
@@ -134,9 +186,33 @@
     -webkit-animation: 3s ease-out both 1s slideInFromLeft;
     animation: 3s ease-out both 1s slideInFromLeft; }
 
+.about {
+  -webkit-animation: 1s ease-out 4s both opacityIn;
+  animation: 1s ease-out 4s both opacityIn; }
+
 .name {
   -webkit-animation: 1s ease-out 4s both slideInFromLeft;
   animation: 1s ease-out 4s both slideInFromLeft; }
+
+.mnth {
+  -webkit-animation: 1s ease-out 4.5s both slideInFromBottom;
+  animation: 1s ease-out 4.5s both slideInFromBottom; }
+
+.annot {
+  -webkit-animation: 1s ease-out 4.5s both slideInFromBottom;
+  animation: 1s ease-out 4.5s both slideInFromBottom; }
+
+h1 {
+  -webkit-animation: 1s ease-out 4s both slideInFromTop;
+  animation: 1s ease-out 4s both slideInFromTop; }
+
+p.nice {
+  -webkit-animation: 1s ease-out 4s both slideInFromTop;
+  animation: 1s ease-out 4s both slideInFromTop; }
+
+hr {
+  -webkit-animation: 1s ease-out 4s both slideInFromTop;
+  animation: 1s ease-out 4s both slideInFromTop; }
 
 .shrt-info {
   -webkit-animation: 1.5s ease-out 4s both slideInFromLeft;
@@ -147,5 +223,9 @@
   animation: 2s infinite 5s bounce; }
 
 .btn-download {
-  -webkit-animation: .2s ease-in-out 5.5s both btnRev;
-  animation: .2s ease-in-out 5.5s both btnRev; }
+  -webkit-animation: .5s ease-in-out 5s both btnRev;
+  animation: .5s ease-in-out 5s both btnRev; }
+
+.off-canvas {
+  -webkit-animation: 1s ease-out 5s both opacityIn;
+  animation: 1s ease-out 5s both opacityIn; }

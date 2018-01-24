@@ -1,3 +1,9 @@
+@keyframes opacityIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
 @keyframes slideInFromRight
   from
     transform: translate(50%)
@@ -9,6 +15,22 @@
 @keyframes slideInFromLeft
   from
     transform: translate(-100%)
+    opacity: 0
+  to
+    transform: translate(0)
+    opacity: 1
+
+@keyframes slideInFromTop
+  from
+    transform: translateY(50%)
+    opacity: 0
+  to
+    transform: translate(0)
+    opacity: 1
+
+@keyframes slideInFromBottom
+  from
+    transform: translateY(-100%)
     opacity: 0
   to
     transform: translate(0)
@@ -49,7 +71,7 @@
 #lottie
     animation: 1s ease-out 0ms forwards loader
 
-.main-body
+.center
   animation: 2s ease-out 3500ms forwards shadowIn
 
 .photo1
@@ -59,8 +81,26 @@
   &::after
     animation: 3s ease-out both 1s slideInFromLeft
 
+.about
+  animation: 1s ease-out 4s both opacityIn
+
 .name
   animation: 1s ease-out 4s both slideInFromLeft
+
+.mnth
+  animation: 1s ease-out 4.5s both slideInFromBottom
+
+.annot
+  animation: 1s ease-out 4.5s both slideInFromBottom
+
+h1
+  animation: 1s ease-out 4s both slideInFromTop
+
+p.nice
+  animation: 1s ease-out 4s both slideInFromTop
+
+hr
+  animation: 1s ease-out 4s both slideInFromTop
 
 .shrt-info
   animation: 1.5s ease-out 4s both slideInFromLeft
@@ -69,4 +109,7 @@
   animation: 2s infinite 5s bounce
 
 .btn-download
-  animation: .2s ease-in-out 5.5s both btnRev
+  animation: .5s ease-in-out 5s both btnRev
+
+.off-canvas
+  animation: 1s ease-out 5s both opacityIn
