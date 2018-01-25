@@ -1,3 +1,11 @@
+@keyframes slideBg
+    from
+      background-position: -200px 0
+      opacity: 0
+    to
+      background-position: 0 0
+      opacity: 1
+
 @keyframes opacityIn
   from
     opacity: 0
@@ -84,8 +92,14 @@
 .about
   animation: 1s ease-out 4s both opacityIn
 
+.ww-about
+  animation: 1s ease-out 1s both opacityIn
+
 .name
   animation: 1s ease-out 4s both slideInFromLeft
+
+.ww-name
+  animation: 1s ease-out 1s both slideInFromLeft
 
 .mnth
   animation: 1s ease-out 4.5s both slideInFromBottom
@@ -95,6 +109,11 @@
 
 h1
   animation: 1s ease-out 4s both slideInFromTop
+
+h1.thesis
+  animation: 1s ease-out 1s both slideInFromBottom
+h2.thesis-sub
+  animation: 1s ease-out 1s both slideInFromTop
 
 p.nice
   animation: 1s ease-out 4s both slideInFromTop
@@ -113,3 +132,12 @@ hr
 
 .off-canvas
   animation: 1s ease-out 5s both opacityIn
+
+.ww-off-canvas
+  animation: 2s ease-out 2s both opacityIn
+
+.ww-nav-bg
+  animation: 2s ease-out 2s both opacityIn
+
+.ww-bg
+  animation: slideBg 2s ease-out both

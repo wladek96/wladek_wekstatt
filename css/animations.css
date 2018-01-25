@@ -1,3 +1,19 @@
+@-webkit-keyframes slideBg {
+  from {
+    background-position: -200px 0;
+    opacity: 0; }
+  to {
+    background-position: 0 0;
+    opacity: 1; } }
+
+@keyframes slideBg {
+  from {
+    background-position: -200px 0;
+    opacity: 0; }
+  to {
+    background-position: 0 0;
+    opacity: 1; } }
+
 @-webkit-keyframes opacityIn {
   from {
     opacity: 0; }
@@ -190,9 +206,17 @@
   -webkit-animation: 1s ease-out 4s both opacityIn;
   animation: 1s ease-out 4s both opacityIn; }
 
+.ww-about {
+  -webkit-animation: 1s ease-out 1s both opacityIn;
+  animation: 1s ease-out 1s both opacityIn; }
+
 .name {
   -webkit-animation: 1s ease-out 4s both slideInFromLeft;
   animation: 1s ease-out 4s both slideInFromLeft; }
+
+.ww-name {
+  -webkit-animation: 1s ease-out 1s both slideInFromLeft;
+  animation: 1s ease-out 1s both slideInFromLeft; }
 
 .mnth {
   -webkit-animation: 1s ease-out 4.5s both slideInFromBottom;
@@ -205,6 +229,14 @@
 h1 {
   -webkit-animation: 1s ease-out 4s both slideInFromTop;
   animation: 1s ease-out 4s both slideInFromTop; }
+
+h1.thesis {
+  -webkit-animation: 1s ease-out 1s both slideInFromBottom;
+  animation: 1s ease-out 1s both slideInFromBottom; }
+
+h2.thesis-sub {
+  -webkit-animation: 1s ease-out 1s both slideInFromTop;
+  animation: 1s ease-out 1s both slideInFromTop; }
 
 p.nice {
   -webkit-animation: 1s ease-out 4s both slideInFromTop;
@@ -229,3 +261,15 @@ hr {
 .off-canvas {
   -webkit-animation: 1s ease-out 5s both opacityIn;
   animation: 1s ease-out 5s both opacityIn; }
+
+.ww-off-canvas {
+  -webkit-animation: 2s ease-out 2s both opacityIn;
+  animation: 2s ease-out 2s both opacityIn; }
+
+.ww-nav-bg {
+  -webkit-animation: 2s ease-out 2s both opacityIn;
+  animation: 2s ease-out 2s both opacityIn; }
+
+.ww-bg {
+  -webkit-animation: slideBg 2s ease-out both;
+  animation: slideBg 2s ease-out both; }
